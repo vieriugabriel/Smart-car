@@ -3,10 +3,10 @@ from umqtt.simple import MQTTClient
 from machine import Pin,PWM,time_pulse_us
 import time
 
-ssid = "TP-Link_3AA4"
-password = "47736214"
+ssid = "YOUR_WIFI_SSID"
+password = "YOUR_WIFI_PASSWORD"
 
-mqtt_server = "192.168.1.134"
+mqtt_server = "YOUR_MQTT_BROKER_IP"
 topic_masina = b"comanda_masina"
 topic_camera = b"control_camera"
 topic_detectie = b"detectie_masina"
