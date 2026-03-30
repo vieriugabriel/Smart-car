@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         mqttHelper = MqttHelper()
 
-        val brokerUrl = "tcp://192.168.98.228:1883"
+        val brokerUrl = "tcp://YOUR_MQTT_BROKER_IP:1883"
         val clientId = "AndroidClient"
         mqttHelper.connect(brokerUrl, clientId)
 
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         val btnStopStream = findViewById<Button>(R.id.btnStopStream)
         btnStartStream.setOnClickListener{
             webView.visibility = View.VISIBLE
-            webView.loadUrl("http://192.168.1.191")
+            webView.loadUrl("http://YOUR_ESP32_CAM_IP")
             btnStartStream.visibility=View.GONE
             btnStopStream.visibility=View.VISIBLE
         }
