@@ -4,8 +4,8 @@
 #define CAMERA_MODEL_WROVER_KIT
 #include "camera_pins.h"
 
-const char *ssid = "UPCB5174ED-distanta";
-const char *password = "8cfffspYys6n";
+const char *ssid = "YOUR_WIFI_SSID";
+const char *password = "YOUR_WIFI_PASSWORD";
 
 WiFiServer server(80);
 
