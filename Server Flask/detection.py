@@ -7,7 +7,7 @@ import paho.mqtt.client as mqtt
 
 app = Flask(__name__)
 model = YOLO("best.pt")
-snapshot_url = "http://192.168.0.143/capture"
+snapshot_url = "http://YOUR_ESP32_CAM_IP/capture"
 last_labels = set()
 model.model.names = [
     'accesul_interzis',
@@ -68,7 +68,7 @@ model.model.names = [
 ]
 
 mqtt_client = mqtt.Client()
-mqtt_client.connect("192.168.0.235", 1883)
+mqtt_client.connect("YOUR_MQTT_BROKER_IP", 1883)
 
 def generate_stream():
     global last_labels
